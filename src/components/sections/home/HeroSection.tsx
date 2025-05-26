@@ -45,20 +45,6 @@ const HeroSection: React.FC = () => {
             >
               AI Agent, Email Automation, Voice Assistant – Powering Smart Solutions for the modern business landscape
             </motion.p>
-            
-            <motion.div 
-              className="mt-8 flex flex-wrap gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-            >
-              <Link to="/contact" className="inline-block px-8 py-3 bg-primary hover:bg-primary-600 text-white rounded-md transition-colors font-medium">
-                Get Started Now
-              </Link>
-              <Link to="/contact" className="inline-block px-8 py-3 bg-transparent border-2 border-white text-white hover:bg-white/10 rounded-md transition-colors font-medium">
-                Book a Demo
-              </Link>
-            </motion.div>
           </div>
           
           <motion.div
