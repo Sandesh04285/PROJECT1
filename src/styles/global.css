@@ -6,33 +6,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Primary color with shades - Updated to match logo theme */
-  --color-primary: 255, 255, 240; /* Warm white */
-  --color-primary-50: 250, 250, 245;
-  --color-primary-100: 245, 245, 240;
-  --color-primary-200: 240, 240, 235;
-  --color-primary-300: 235, 235, 230;
-  --color-primary-400: 230, 230, 225;
-  --color-primary-500: 225, 225, 220;
-  --color-primary-600: 220, 220, 215;
-  --color-primary-700: 215, 215, 210;
-  --color-primary-800: 210, 210, 205;
-  --color-primary-900: 205, 205, 200;
+  /* Primary color with shades */
+  --color-primary: 79, 70, 229; /* indigo-600 */
+  --color-primary-50: 238, 242, 255;
+  --color-primary-100: 224, 231, 255;
+  --color-primary-200: 199, 210, 254;
+  --color-primary-300: 165, 180, 252;
+  --color-primary-400: 129, 140, 248;
+  --color-primary-500: 99, 102, 241;
+  --color-primary-600: 79, 70, 229;
+  --color-primary-700: 67, 56, 202;
+  --color-primary-800: 55, 48, 163;
+  --color-primary-900: 49, 46, 129;
   
   /* Secondary color with shades */
-  --color-secondary: 18, 18, 18; /* Dark background */
+  --color-secondary: 124, 58, 237; /* purple-600 */
   
   /* Accent color with shades */
-  --color-accent: 40, 40, 40; /* Darker accent */
+  --color-accent: 236, 72, 153; /* pink-500 */
   
   /* Success color with shades */
-  --color-success: 144, 238, 144; /* Light green */
+  --color-success: 16, 185, 129; /* emerald-500 */
   
   /* Warning color with shades */
-  --color-warning: 255, 215, 0; /* Gold */
+  --color-warning: 245, 158, 11; /* amber-500 */
   
   /* Error color with shades */
-  --color-error: 255, 99, 71; /* Tomato */
+  --color-error: 239, 68, 68; /* red-500 */
 }
 
 @layer base {
@@ -42,11 +42,11 @@
   }
   
   body {
-    @apply text-gray-100 bg-gray-900;
+    @apply text-gray-800 bg-white;
   }
   
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight text-white;
+    @apply font-semibold tracking-tight;
   }
 }
 
@@ -110,13 +110,4 @@
 
 .focus-visible\:ring-primary:focus-visible {
   --tw-ring-color: rgba(var(--color-primary), 0.6);
-}
-
-/* Custom background gradients */
-.bg-custom-gradient {
-  background: linear-gradient(to right, rgb(18, 18, 18), rgb(28, 28, 28), rgb(18, 18, 18));
-}
-
-.text-glow {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
