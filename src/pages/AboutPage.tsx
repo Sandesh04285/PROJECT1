@@ -170,81 +170,19 @@ const AboutPage: React.FC = () => {
         </div>
       </section>
       
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-sm font-medium mb-3">
-              Our Team
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Meet the Innovators
-            </h2>
-            <p className="text-lg text-gray-600">
-              Our diverse team brings together expertise from AI research, software development, and business transformation.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              {
-                name: "Alex Martin",
-                role: "Founder & CEO",
-                image: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              },
-              {
-                name: "Priya Sharma",
-                role: "CTO",
-                image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              },
-              {
-                name: "David Chen",
-                role: "Head of AI Research",
-                image: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              },
-              {
-                name: "Sophia Washington",
-                role: "VP of Customer Success",
-                image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              }
-            ].map((member, index) => (
-              <motion.div
-                key={index}
-                className="bg-white rounded-xl shadow-md overflow-hidden"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-100px" }}
-              >
-                <div className="h-64 overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-semibold mb-1">{member.name}</h3>
-                  <p className="text-primary">{member.role}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
       <section className="bg-primary text-white py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Join Our Team
+            Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
-            We're always looking for talented individuals who are passionate about AI and automation.
+            Let's discuss how our AI automation solutions can help your business grow.
           </p>
           <a 
             href="/contact" 
             className="inline-block px-8 py-3 bg-white text-primary hover:bg-blue-50 rounded-md transition-colors font-medium"
           >
-            View Open Positions
+            Contact Us Today
           </a>
         </div>
       </section>
