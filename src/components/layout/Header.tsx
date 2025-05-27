@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   
   const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     scrolled 
-      ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' 
+      ? 'bg-black/90 backdrop-blur-md shadow-sm py-3' 
       : 'bg-transparent py-5'
   }`;
   
@@ -85,14 +85,14 @@ const Header: React.FC = () => {
       
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-white">
+        <div className="md:hidden bg-black">
           <div className="container mx-auto px-4 py-4 space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`block text-sm font-medium transition-colors hover:text-primary ${
-                  location.pathname === link.path ? 'text-primary' : 'text-gray-700'
+                className={`block text-sm font-medium transition-colors hover:text-white ${
+                  location.pathname === link.path ? 'text-white' : 'text-gray-300'
                 }`}
               >
                 {link.name}
