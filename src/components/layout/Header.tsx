@@ -42,12 +42,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
-            <img 
-              src="/491839452_1459615758732935_7752266952528211862_n.jpg"
-              alt="AUTO-SCALE Logo"
-              className="h-12 w-12 rounded-full object-cover"
-            />
+          <Link to="/" className="flex items-center space-x-2">
             <BrainCircuit className="h-8 w-8 text-white" />
             <span className="font-bold text-xl text-white">AUTO-SCALE</span>
           </Link>
