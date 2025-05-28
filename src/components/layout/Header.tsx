@@ -44,9 +44,9 @@ const Header: React.FC = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
             <img 
-              src="/autoscale-logo.jpg"
+              src="/491839452_1459615758732935_7752266952528211862_n.jpg"
               alt="AUTO-SCALE Logo"
-              className="h-12 w-12 rounded-full object-cover border-2 border-white/20"
+              className="h-12 w-12 rounded-full object-cover"
             />
             <BrainCircuit className="h-8 w-8 text-white" />
             <span className="font-bold text-xl text-white">AUTO-SCALE</span>
