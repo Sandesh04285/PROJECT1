@@ -33,7 +33,7 @@ const Header: React.FC = () => {
   
   const headerClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
     scrolled 
-      ? 'bg-black/90 backdrop-blur-md shadow-sm py-3' 
+      ? 'bg-black backdrop-blur-md shadow-sm py-3' 
       : 'bg-transparent py-5'
   }`;
   
@@ -42,7 +42,12 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
+            <img 
+              src="/491839452_1459615758732935_7752266952528211862_n.jpg"
+              alt="AUTO-SCALE Logo"
+              className="h-12 w-12 rounded-full object-cover"
+            />
             <BrainCircuit className="h-8 w-8 text-white" />
             <span className="font-bold text-xl text-white">AUTO-SCALE</span>
           </Link>
