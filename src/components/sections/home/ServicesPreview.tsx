@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Bot, Mail, Mic } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import ServiceCard from '../../ui/ServiceCard';
 
 const services = [
@@ -9,35 +9,62 @@ const services = [
     title: 'AI Agent',
     description: 'Empower your business with intelligent task automation.',
     icon: Bot,
-    features: [
+    shortFeatures: [
+      'AI-driven decision-making',
+      'Seamless workflow integration'
+    ],
+    fullFeatures: [
       'Leverage AI-driven decision-making for enhanced productivity',
       'Integrate seamlessly with your existing workflows',
-      'Automate complex business processes with ease'
+      'Automate complex business processes with ease',
+      'Natural language understanding for human-like conversations',
+      'Customizable responses based on your business needs',
+      '24/7 customer support automation'
     ]
   },
   {
     title: 'Email Automation',
     description: 'Automate routine email responses and campaigns.',
     icon: Mail,
-    features: [
+    shortFeatures: [
+      'Smart email classification',
+      'Automated responses'
+    ],
+    fullFeatures: [
       'Improve customer engagement with personalized communication',
       'Reduce manual effort while increasing efficiency',
-      'Smart classification and prioritization of emails'
+      'Smart classification and prioritization of emails',
+      'Automated response generation based on content',
+      'Personalized email campaign management',
+      'Detailed analytics and performance tracking'
     ]
   },
   {
     title: 'Voice Assistant',
     description: 'Elevate customer interaction through voice-driven automation.',
     icon: Mic,
-    features: [
+    shortFeatures: [
+      'Natural voice processing',
+      'Multi-platform support'
+    ],
+    fullFeatures: [
       'Seamlessly handle inquiries, bookings, and support with voice commands',
       'Enhance accessibility and convenience for users',
-      'Natural language processing for human-like interactions'
+      'Natural language processing for human-like interactions',
+      'Custom voice commands for specific tasks',
+      'Voice biometrics for security',
+      'Multi-platform compatibility'
     ]
   }
 ];
 
 const ServicesPreview: React.FC = () => {
+  const [expandedService, setExpandedService] = useState<string | null>(null);
+
+  const toggleService = (title: string) => {
+    setExpandedService(expandedService === title ? null : title);
+  };
+
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
@@ -61,13 +88,34 @@ const ServicesPreview: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
+              className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-              <ServiceCard
-                title={service.title}
-                description={service.description}
-                icon={service.icon}
-                features={service.features}
-              />
+              <div className="bg-gray-50 p-6 flex justify-center items-center">
+                <div className="bg-primary/10 p-4 rounded-full">
+                  <service.icon size={40} className="text-primary" />
+                </div>
+              </div>
+              
+              <div className="p-6">
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-600 mb-6">{service.description}</p>
+                
+                <ul className="space-y-2 mb-6">
+                  {(expandedService === service.title ? service.fullFeatures : service.shortFeatures).map((feature, idx) => (
+                    <li key={idx} className="flex items-start space-x-2">
+                      <span className="text-primary text-lg leading-none mt-0.5">•</span>
+                      <span className="text-sm text-gray-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                
+                <button
+                  onClick={() => toggleService(service.title)}
+                  className="w-full py-2.5 px-4 bg-primary hover:bg-primary-600 text-white rounded-md transition-colors font-medium"
+                >
+                  {expandedService === service.title ? 'Show Less' : 'Learn More'}
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>
