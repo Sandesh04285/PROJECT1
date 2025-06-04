@@ -43,8 +43,8 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <BrainCircuit className="h-8 w-8 text-white" />
-            <span className="font-bold text-xl text-white">AUTO-SCALE</span>
+            <BrainCircuit className="h-8 w-8 bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 rounded-full p-1 text-white" />
+            <span className="font-bold text-xl bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">AUTO-SCALE</span>
           </Link>
           
           {/* Desktop Navigation */}
